@@ -1,0 +1,26 @@
+﻿﻿<div id="lexiconBuilder" ng-controller="LexiconBuilderController as vm">
+
+    <umb-box>
+        <umb-box-content>
+            <h3 class="bold" style="margin-bottom: -.25em;">Lexicon Builder</h3>
+
+            <div>
+                <div>
+                    <p></p>
+                    <p>Generating Lexicon will create a static Lexicon.generated.cs class (at the root of your project) with strong typed properties based on existing dictionary items.</p>
+                    <p>
+                        Nested dictionary items are supported.
+                        Only leaf values of the dictionary tree are exposed as string properties of the Lexicon, and their parent nodes are represented by structs.
+                        The name of each string/struct is derived from its related dictionary item key (first parts of dot seperated keys are ignored, i.e. 'foo.bar.val' --> 'val').
+                    </p>
+                </div>
+                <div>
+                    <button type="button" ng-click="vm.generate()" class="btn btn-danger">
+                        <span>Generate Lexicon</span>
+                    </button>
+                </div>
+            </div>
+        </umb-box-content>
+    </umb-box>
+
+</div>
